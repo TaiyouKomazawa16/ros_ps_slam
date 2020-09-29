@@ -1,0 +1,10 @@
+<launch>
+
+    <!--urg測域センサが車体前方100mmに位置するため。TF2のフレームをbase_link以下に配置-->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="urg_sensor" args="0.1 0 0 0 0 0 1 base_link urg_sensor"/>
+    
+    <include file="$(find ros_ps_rover_base)/launch/manual_ctrl.launch"/>
+ 
+    <node pkg="urg_node" name="urg_node" type="urg_node" required="true"/>
+ 
+</launch>
