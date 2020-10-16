@@ -5,13 +5,6 @@
     <group if="$(arg use_rviz)">
         <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_conf)"/>
     </group>
-
-    <!--urg測域センサが車体前方100mmに位置するため。TF2のフレームをbase_link以下に配置-->
-    <node pkg="tf2_ros" type="static_transform_publisher" name="urg_sensor" args="0.1 0 0 0 0 0 1 base_link urg_sensor"/>
- 
-    <node pkg="urg_node" name="urg_node" type="urg_node" required="true">
-        <param name="frame_id" value="urg_sensor"/>
-    </node>
  
     <arg name="scan_topic" default="/scan"/>
     <arg name="odom_topic" default="/odometry/filtered"/>
