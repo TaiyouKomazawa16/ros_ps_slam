@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   gmapping
   urg_node
+  cartographer_ros
 )
 
 ## System dependencies are found with CMake's conventions

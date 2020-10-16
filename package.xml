@@ -54,7 +54,9 @@
 
   <depend>sensor_msgs</depend>
   <depend>urg_node</depend>
+
   <depend>gmapping</depend>
+  <depend>cartographer_ros</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
