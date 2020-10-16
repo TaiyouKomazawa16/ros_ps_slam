@@ -18,7 +18,7 @@
  
     <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen">
         <param name="base_frame" value="base_link"/>
-        <param name="odom_frame" value="ps_odom"/>
+        <param name="odom_frame" value="odom"/>
 
         <!--URGでの観測に用いる最大距離[m]-->
         <param name="maxUrange" value="3.9"/>
