@@ -1,5 +1,4 @@
 <launch>
     <include file="$(find ros_ps_rover_base)/launch/manual_ctrl.launch"/>
-    <!--<include file="$(find ros_ps_slam)/launch/util/slam.launch"/>-->
     <include file="$(find ros_ps_slam)/launch/util/slam_cartographer.launch"/>
 </launch>

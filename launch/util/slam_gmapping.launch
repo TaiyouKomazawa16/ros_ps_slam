@@ -14,9 +14,9 @@
         <param name="odom_frame" value="odom"/>
 
         <!--URGでの観測に用いる最大距離[m]-->
-        <param name="maxUrange" value="3.9"/>
+        <param name="maxUrange" value="10.0"/>
         <!--URGが観測できる最大距離[m]-->
-        <param name="maxRange" value="4.0" />
+        <param name="maxRange" value="10.0" />
 
         <!--※(maxUrange < 実際のセンサーの最大範囲 <= maxRange)とすること-->
 
@@ -35,7 +35,7 @@
         <param name="xmax" value="100.0"/>
         <param name="ymax" value="100.0"/>
         <!--地図の解像度1グリッドあたりの縮尺[m/グリッド]-->
-        <param name="delta" value="0.05"/>
+        <param name="delta" value="0.025"/>
  
         <!--直進1mあたりの直進方向の誤差[m]-->
         <param name="srr" value="0.1"/>
@@ -47,7 +47,7 @@
         <param name="stt" value="0.45"/>
 
         <!--測定を行う粒子数(1回毎のサンプリングの精度)-->
-        <param name="particles" value="500"/>
+        <param name="particles" value="1000"/>
         <!--スキャンマッチングにジャンピングが発生した場合は50に設定する-->
         <param name="minimumScore" value="50"/>
     </node>

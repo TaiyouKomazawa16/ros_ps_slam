@@ -2,7 +2,7 @@
   <node name="cartographer_node" pkg="cartographer_ros"
       type="cartographer_node" args="
           -configuration_directory $(find ros_ps_slam)/config
-          -configuration_basename urg04x.lua"
+          -configuration_basename urg2d.lua"
       output="screen">
     <remap from="imu" to="/imu/data"/>
     <remap from="odom" to="/odometry/filtered"/>
