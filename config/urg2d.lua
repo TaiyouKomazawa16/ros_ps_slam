@@ -43,7 +43,7 @@ TRAJECTORY_BUILDER_2D.submaps.range_data_inserter.probability_grid_range_data_in
 TRAJECTORY_BUILDER_2D.submaps.range_data_inserter.probability_grid_range_data_inserter.miss_probability = 0.493
 -- slightly shorter rays
 TRAJECTORY_BUILDER_2D.min_range = 0.02
-TRAJECTORY_BUILDER_2D.max_range = 4.0
+TRAJECTORY_BUILDER_2D.max_range = 10.0
 -- wheel odometry is fine
 TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 50
 -- IMU is ok
