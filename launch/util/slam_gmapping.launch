@@ -14,20 +14,20 @@
         <param name="odom_frame" value="odom"/>
 
         <!--URGでの観測に用いる最大距離[m]-->
-        <param name="maxUrange" value="10.0"/>
+        <param name="maxUrange" value="9.0"/>
         <!--URGが観測できる最大距離[m]-->
         <param name="maxRange" value="10.0" />
 
         <!--※(maxUrange < 実際のセンサーの最大範囲 <= maxRange)とすること-->
 
         <!--地図の更新間隔[sec]-->
-        <param name="map_update_interval" value="1.0"/>
+        <param name="map_update_interval" value="0.5"/>
         <!--移動距離による観測間隔[rad]-->
         <param name="linearUpdate" value="1.0"/>
         <!--移動角度による観測間隔[rad]-->
         <param name="angularUpdate" value="0.2"/>
         <!--時間経過による観測周期[sec]-->
-        <param name="temporalUpdate" value="2.0"/>
+        <param name="temporalUpdate" value="1.0"/>
 
         <!--作成する地図の大きさ[m]-->
         <param name="xmin" value="-100.0"/>
