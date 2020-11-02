@@ -14,7 +14,7 @@
         <param name="odom_frame" value="odom"/>
 
         <!--URGでの観測に用いる最大距離[m]-->
-        <param name="maxUrange" value="9.0"/>
+        <param name="maxUrange" value="8.0"/>
         <!--URGが観測できる最大距離[m]-->
         <param name="maxRange" value="10.0" />
 
