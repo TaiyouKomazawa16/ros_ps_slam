@@ -33,7 +33,7 @@ TRAJECTORY_BUILDER_2D.num_accumulated_range_data = 2
 TRAJECTORY_BUILDER_2D.use_imu_data = false
 TRAJECTORY_BUILDER_2D.submaps.num_range_data = 45
 TRAJECTORY_BUILDER_2D.use_online_correlative_scan_matching = false
-TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(0.1)  
+-- TRAJECTORY_BUILDER_2D.motion_filter.max_angle_radians = math.rad(0.1)  
 
 -- more points
 TRAJECTORY_BUILDER_2D.adaptive_voxel_filter.max_length = 0.2
@@ -45,9 +45,9 @@ TRAJECTORY_BUILDER_2D.submaps.range_data_inserter.probability_grid_range_data_in
 TRAJECTORY_BUILDER_2D.min_range = 0.02
 TRAJECTORY_BUILDER_2D.max_range = 10.0
 -- wheel odometry is fine
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 50
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.translation_weight = 70
 -- IMU is ok
-TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 100
+TRAJECTORY_BUILDER_2D.ceres_scan_matcher.rotation_weight = 200
 
 -- less outliers
 POSE_GRAPH.constraint_builder.max_constraint_distance = 5.

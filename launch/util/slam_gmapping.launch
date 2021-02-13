@@ -5,10 +5,10 @@
     <group if="$(arg use_rviz)">
         <node pkg="rviz" type="rviz" name="rviz" args="-d $(arg rviz_conf)"/>
     </group>
- 
+
     <arg name="scan_topic" default="/scan"/>
     <arg name="odom_topic" default="/odometry/filtered"/>
- 
+
     <node pkg="gmapping" name="slam_gmapping" type="slam_gmapping" output="screen">
         <param name="base_frame" value="base_link"/>
         <param name="odom_frame" value="odom"/>
@@ -21,13 +21,15 @@
         <!--※(maxUrange < 実際のセンサーの最大範囲 <= maxRange)とすること-->
 
         <!--地図の更新間隔[sec]-->
-        <param name="map_update_interval" value="0.5"/>
-        <!--移動距離による観測間隔[rad]-->
-        <param name="linearUpdate" value="1.0"/>
+        <param name="map_update_interval" value="0.45"/>
+        <!--移動距離による観測間隔[m]-->
+        <param name="linearUpdate" value="0.25"/>
         <!--移動角度による観測間隔[rad]-->
-        <param name="angularUpdate" value="0.2"/>
+        <param name="angularUpdate" value="0.19"/>
         <!--時間経過による観測周期[sec]-->
-        <param name="temporalUpdate" value="1.0"/>
+        <param name="temporalUpdate" value="0.2"/>
+        <!--リサンプリング閾値Neff-->
+        <param name="resampleThreshold" value="0.7"/>
 
         <!--作成する地図の大きさ[m]-->
         <param name="xmin" value="-100.0"/>
@@ -36,7 +38,7 @@
         <param name="ymax" value="100.0"/>
         <!--地図の解像度1グリッドあたりの縮尺[m/グリッド]-->
         <param name="delta" value="0.05"/>
- 
+
         <!--直進1mあたりの直進方向の誤差[m]-->
         <param name="srr" value="0.1"/>
         <!--回転1radあたりの直進方向の誤差[m]-->
@@ -47,7 +49,7 @@
         <param name="stt" value="0.45"/>
 
         <!--測定を行う粒子数(1回毎のサンプリングの精度)-->
-        <param name="particles" value="800"/>
+        <param name="particles" value="500"/>
         <!--スキャンマッチングにジャンピングが発生した場合は50に設定する-->
         <param name="minimumScore" value="50"/>
     </node>
